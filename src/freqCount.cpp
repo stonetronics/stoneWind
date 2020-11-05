@@ -41,7 +41,7 @@ uint32_t freqCountGetTotalMillis( void )
 }
 
 ISR(TIMER0_COMPA_vect) {
-  if (totalMillis == ((2^32)-1) )
+  if (totalMillis == 4294967295) //biggest 32 bit integer
     totalMillis = 0;
   else
     totalMillis ++;

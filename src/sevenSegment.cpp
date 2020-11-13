@@ -156,6 +156,15 @@ void sevenSegmentDisplayNumberWithDp(float number)
   }
 }
 
+void sevenSegmentClear( void )
+{
+  digitsToDisplay[0] = 16;
+  digitsToDisplay[1] = 16;
+  digitsToDisplay[2] = 16;
+  //set dp to an invalid position
+  sevenSegmentSetDp(-1);
+}
+
 
 ISR(TIMER2_OVF_vect)
 {
